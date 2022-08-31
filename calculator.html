@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+    <head>
+        <title></title>
+        <body>
+            <input type="number" name="first" id="first" step="any"/>
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="number" name="second" id="second" step="any"/>
+            <br/>
+            <br/>
+            <button onclick="cal()">Calculate</button>
+            <input type="text" name=""  id="res" readonly=""/>
+        </body>
+        <script type="text/javascript">
+            function cal(){
+                var operator1=document.getElementById("first").value;
+                var operator1=document.getElementById("second").value;
+                var operator= document.getElementById("operator").value;
+                if(operator=="+")//&&operato=="-"&& operator=="*" && operator=="/")
+                {
+                    var res=parseInt(operator1) + parseInt(operator2);         // pasrseInt used for converting the value of string to integer
+                }
+                if(operator=="-")
+                {
+                    var res=parseInt(operator1) -parseInt(operator2); 
+                }
+                if(operator=="*")
+                {
+                    var res= parseInt(operator1)*parseInt(operator2);       
+                }
+                if(operator=="/")
+                {
+                    var res= parseInt(operator1)/parseInt(operator2);   
+                }
+                if(operator=="%")
+                {
+                
+                    var res= parseInt(operator1)% parseInt(operator2);   
+                }
+                alert(res);
+                document.getElementById("res").value=res;
+
+            }
+        </script>
+    </head>
+</html>
